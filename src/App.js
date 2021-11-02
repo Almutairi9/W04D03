@@ -1,4 +1,4 @@
-import React from "react";
+
 import {Route , Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,6 +11,7 @@ import Nav from "./components/Nav";
 const App = () => {
   return (  
     <>  
+    <div className="App">
       <Nav />
       <Switch>  
       <Route exact path ="/Home" component = {Home}/> 
@@ -18,11 +19,13 @@ const App = () => {
       <Route exact path ="/Contact" component = {Contact}/>
       <Route exact path ="/Cards" component = {Cards}/> 
       <Route exact path ="/Card" component = {Card}/>
-      <Route path ="*" render ={() => { return <h1>404</h1>}} />
+      <Route path ="*" render ={() => { return <h1>404</h1>; }} />
      </Switch>
+     </div>
     </>
   );
-}; 
-
+} 
 export default App; 
+
+
 

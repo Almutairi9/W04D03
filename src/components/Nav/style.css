@@ -1,0 +1,18 @@
+ul li{
+    display: inline-block;
+    margin: 40px;
+    font-size: 25px;
+    color: black;
+  }
+  
+  li{
+    color: white;
+    padding: 20px;
+  }
+  /* .className{
+    list-style-type: none;
+  }
+  .className:hover{
+    color: gray; 
+  } */
+   

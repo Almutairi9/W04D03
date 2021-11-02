@@ -1,45 +1,53 @@
-import React from "react";
+import { React, useState } from "react";
 import { useHistory } from "react-router";
-
-// import "./style.css";
+import "./style.css";
 
 const Cards = () => {
-  const history = useHistory();
-  const cards = [
+  const [cards] = useState([
     {
       id: 0,
-      name: "Math",
-      image: "./tree.jpg", 
+      name: "English",
+      image:
+        "https://cdn5.vectorstock.com/i/1000x1000/02/84/blue-round-english-subject-concept-vector-18370284.jpg",
     },
     {
-      id: 1, 
+      id: 1,
       name: "Art",
-      image: "https://aup.imgix.net/user_images/164014/private-l…uto=format,compress&w=300&h=300&dpr=2.625&frame=1",
+      image:
+        "https://ih1.redbubble.net/image.855122306.2661/poster,504x498,f8f8f8-pad,600x600,f8f8f8.u3.jpg",
     },
     {
       id: 2,
-      name: "IT",
-      image: "https://aup.imgix.net/user_images/164014/private-l…uto=format,compress&w=300&h=300&dpr=2.625&frame=1",
+      name: "Math",
+      image:
+        "https://p3cdn4static.sharpschool.com/UserFiles/Servers/Server_770743/Image/Technology/Other%20Pictures/math.jpg",
     },
-  ];
+  ]);
+
+  let history = useHistory();
 
   const changeRoute = (id) => {
-    console.log(id);
+    // console.log(id);
     history.push(`/card/${id}`);
   };
+
+  // const searchPath=(e)=>{
+  //   //   console.log(e.target.search.value);
+  //   history.push(`/Search/${e.target.search.value}`);
+  // }
+
   return (
     <div className="cards">
-      {cards.map((item, i) => { 
+      {cards.map((item) => {
         return (
           <div
             className="card"
-            key={item.id}
             onClick={() => {
               changeRoute(item.id);
             }}
           >
+            <img src={item.image} alt="here is subject figure" />
             <h2>{item.name}</h2>
-            <img src={item.img} alt={item.name} />
           </div>
         );
       })}
@@ -47,3 +55,4 @@ const Cards = () => {
   );
 };
 export default Cards;
+// key={item.id}

@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import "./style.css";
 
 const Nav = () => {
     return (
-        <div className = "nav">
             <ul>
                 <li>
                     <Link to="/Home" className="link">Home</Link>
@@ -18,13 +17,8 @@ const Nav = () => {
                 <li>
                     <Link to="/Cards" className="link">Cards</Link>
                 </li>
-                <li> 
-                    <Link to="/Card" className="link">Card</Link> 
-                </li>
             </ul>
-
-        </div>
     )
 }
- 
 export default Nav;
+

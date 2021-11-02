@@ -4,8 +4,8 @@ import React from 'react';
 const Contact = () => {
 
     return(
-        <div className= "contact"> 
-     <h2>Contact</h2> 
+        <div> 
+     <h2>Contact us</h2> 
         </div>
     )
 }
