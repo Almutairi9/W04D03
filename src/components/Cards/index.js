@@ -28,7 +28,7 @@ const Cards = () => {
 
   const changeRoute = (id) => {
     // console.log(id);
-    history.push(`/card/${id}`);
+    history.push(`/Card/${id}`);
   };
 
   // const searchPath=(e)=>{
@@ -42,6 +42,7 @@ const Cards = () => {
         return (
           <div
             className="card"
+            key={item.id}
             onClick={() => {
               changeRoute(item.id);
             }}
@@ -55,4 +56,3 @@ const Cards = () => {
   );
 };
 export default Cards;
-// key={item.id}
